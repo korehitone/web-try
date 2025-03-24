@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@100..900&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --dark-wood : #293535;
+    --dark-leaf: #556e68 ;
+    --light-leaf: #7c9e9d;
+    --frost-lake: #b6cdc7;
+    --snow: #e5e6e1;
+}
+
+html{
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    perspective: 1.6px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+
+#home{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(assets/home_bg_sc.jpg);
+    background-position: top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(0px);
+    /* how to show text in image */
+}
+
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-title {
+    color: var(--snow);
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-medium;
+    margin-bottom: -24px;
+}
+
+.home-text{
+    color: var(--frost-lake);
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 84%;
+    letter-spacing: -.05em;
+}
+
+.home-text span{
+    color: mediumseagreen;
+}
+
+
+#about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* how to show text in image */
+    background-color: var(--dark-wood);
+    background-size:100px 100px;
+    /* 100px 100px, 50px 50px, 50px 50px; */
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.about-title{
+    color: var(--frost-lake);
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 0.5rem;
+    margin-left: 4%;
+}
+
+.about-text{
+    color: var(--frost-lake);
+    width: fit-content;
+    font-size: 4rem;
+    margin-block: 0;
+    margin-inline: 4%;
+}
+
+
+#skill {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* how to show text in image */
+    background: var(--dark-leaf);
+    
+}
+
+.skill-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.skill-title{
+    color: var(--frost-lake);
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 0.5rem;
+    margin-inline-start: 4%;
+}
+
+.skill-child-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    pointer-events: none;
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+.skills{
+    color: var(--frost-lake);
+    width: fit-content;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 84%;
+    letter-spacing: -.05em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4%;
+    pointer-events: auto;
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+.skill-desc{
+    visibility: hidden;
+    color: var(--dark-wood);
+    margin-right: 4%;
+}
+
+hr{
+    height: 0.1px;
+    width: 100%;
+    margin: 0;
+}
+
+.skills:hover{
+    color: var(--dark-wood);
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+.skills:hover + .skill-desc{
+    visibility: visible;
+}
+
+.skill-child-container:has(.skills:hover){
+    width: 100%;
+    background-color: var(--light-leaf);
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+#history {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+    
+}
+
+#history::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .4)), url(assets/winter_lake_frost.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: translateZ(-1px) scale(1.7);
+    background-repeat: no-repeat;
+    filter: blur(0.2px);
+}
+
+#canvas{
+    z-index: 1;
+}
+.history-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.history-title{
+    color: var(--snow);
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 0.5rem;
+    margin-inline-start: 4%;
+}
+
+.history-year{
+    color: var(--snow);
+    width: fit-content;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 84%;
+    letter-spacing: -.05em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4%;
+    margin-right: 6%;
+    pointer-events: auto;
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+.history-child-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding: 2%;
+    pointer-events: none;
+    transition: 0.6s;
+    transition-behavior: initial(0);
+}
+
+.history-job{
+    color: var(--snow);
+    width: fit-content;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 84%;
+    letter-spacing: -.05em;
+}
+
+.history-place{
+    color: var(--snow);
+}
+
+#contact{
+    width: 100%;
+    min-height: 60%;
+    background-color: var(--dark-wood);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.contact-title{
+    color: var(--frost-lake);
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 0.5rem;
+    margin-inline-start: 4%;
+}
+
+.contact-child-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.contacts{
+    margin: 0;
+    color: var(--frost-lake);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-left: 2%;
+    padding-right: 2%;
+    transition: 0.2s;
+}
+
+
+.email, .phone{
+    color: var(--frost-lake);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.other-desc{
+    color: var(--light-leaf);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.contacts:hover{
+    background-color: var(--frost-lake);
+    color: var(--dark-leaf);
+    transition: 0.2s;
+}
+
+.contacts{
+    text-decoration: none;
+}
+
+#instagram:hover::after{
+    content: " - @rynnasa";
+    font-size: large;
+}
+
+#github:hover::after{
+    content: " - Kore Kaihatsu";
+    font-size: large;
+}
+
+#dribble:hover::after{
+    content: " - Muhammad Akna";
+    font-size: large;
+}
+
+.other{
+    padding: 2%;
+}
+
+.other p{
+    margin: 0;
+}
+
+.other:hover{
+    background-color: var(--frost-lake);
+    cursor: pointer;
+}
+
+.other:hover .email, .other:hover .phone{
+    color: var(--dark-wood);
+}
+
+.other:hover .other-desc{
+    color: var(--dark-wood);
+}
+
+@media (max-width: 900px) {
+    .home-text, .about-text, .skills{
+        font-size: 3.5rem;
+    }
+    
+    .contact-child-container{
+        flex-direction: column;
+    }
+}

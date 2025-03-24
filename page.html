@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Syntxr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="page.css" />
+    <script src="page.js"></script>
+  </head>
+
+  <body>
+
+    <section onload="createRain()" id="home">
+      <div class="home-container">
+        <h2 class="home-title">Syntxr</h2>
+        <h1 class="home-text">
+          MOBILE<br />DEVELOPER<br /><span>ANDROID</span>
+        </h1>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-container">
+        <h2 class="about-title">ABOUT ME</h2>
+        <h1 class="about-text">
+          I'm Android Mobile Developer based on Kotlin language.
+        </h1>
+      </div>
+    </section>
+
+    <section id="skill">
+      <div class="skill-container">
+        <h2 class="skill-title">MY SKILL</h2>
+        <hr />
+        <div class="skill-child-container">
+          <p class="skills">KOTLIN</p>
+          <p class="skill-desc">Creating logical with clean architecture</p>
+        </div>
+        <hr />
+        <div class="skill-child-container">
+          <p class="skills">COMPOSE</p>
+          <p class="skill-desc">
+            Implementing interface design with jetpack-compose
+          </p>
+        </div>
+        <hr />
+        <div class="skill-child-container">
+          <p class="skills">SQL</p>
+          <p class="skill-desc">
+            Making efficient database design and relation
+          </p>
+        </div>
+        <hr />
+        <div class="skill-child-container">
+          <p class="skills">UI/UX DESIGN</p>
+          <p class="skill-desc">Designing interface for app mobile</p>
+        </div>
+        <hr />
+      </div>
+    </section>
+
+    <section id="history">
+      <div class="history-container">
+        <h2 class="history-title">HISTORY</h2>
+        <hr />
+        <div class="history-child-container">
+          <p class="history-year">2022</p>
+          <div class="history-job-container">
+            <p class="history-job">WEB FRONT-END DEVELOPER</p>
+            <p class="history-place">OMG! (now Shopcomm)</p>
+          </div>
+        </div>
+        <hr />
+        <div class="history-child-container">
+          <p class="history-year">2022</p>
+          <div class="history-job-container">
+            <p class="history-job">WEB DESIGN INTERFACE</p>
+            <p class="history-place">OMG! (now Shopcomm)</p>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </canvas>
+    </section>
+    <section id="contact">
+      <div class="contact-container">
+        <h2 class="contact-title">CONNECT</h2>
+        <div class="contact-child-container">
+          <div class="contact-grid">
+            <a href="https://www.instagram.com/rynnasa/" target="_blank" class="contacts" id="instagram">Instagram</a>
+            <a href="https://github.com/korehitone" target="_blank" class="contacts" id="github">Github</a>
+            <a href="https://dribbble.com/aserch" target="_blank" class="contacts" id="dribble">Dribble</a>
+          </div>
+          <div class="contact-grid">
+            <div onclick="toEmail()" class="other" id="email">
+              <p class="email">Email</p>
+              <p class="other-desc">aserctech@outlook.com</p>
+            </div>
+            <div onclick="toPhone()" class="other" id="phone">
+              <p class="phone">Phone</p>
+              <p class="other-desc">+62 857 7801 3966</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    snowFall.snow(document.getElementById("history"), {
+  round: true,
+  minSize: 1,
+  maxSize: 6
+});
+  </script>
+</html>
