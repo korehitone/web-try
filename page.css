@@ -182,6 +182,7 @@ section {
 }
 
 .skill-desc{
+    display: none;
     visibility: hidden;
     color: var(--dark-wood);
     margin-right: 4%;
@@ -200,6 +201,7 @@ hr{
 }
 
 .skills:hover + .skill-desc{
+    display: block;
     visibility: visible;
 }
 
@@ -411,4 +413,18 @@ hr{
     .contact-child-container{
         flex-direction: column;
     }
+
+    .skill-child-container{
+        width: 100%w;
+        justify-content: center;
+        align-items: start;
+        padding: 0 2%;
+        flex-direction: column;
+    }
+
+    .skills{
+        margin: 0;
+    }
+
+   
 }
